@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/TheHippo/mnc/device"
 	"github.com/TheHippo/mnc/util"
 
@@ -20,7 +18,7 @@ var listCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		fmt.Print(util.MakePretty(device.MakePrettyIter(ifaces)))
+		logger.Print(util.MakePretty(device.MakePrettyIter(ifaces)))
 		return nil
 	},
 }

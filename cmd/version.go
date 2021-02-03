@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +11,7 @@ var versionCmd = &cobra.Command{
 	Short: "shows the version of mnc you are using",
 	Args:  cobra.NoArgs,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(version)
+		logger.Println(version)
 	},
 }
 
